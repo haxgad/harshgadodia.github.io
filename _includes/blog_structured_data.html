@@ -1,0 +1,30 @@
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": "{{ page.title }}",
+  "description": "{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}",
+  "image": "{{ site.url }}/profile.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Harsh Gadodia",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Harsh Gadodia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/profile.jpg"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}"
+}
+</script>
+{% endif %} 

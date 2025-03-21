@@ -2,6 +2,7 @@
 layout: home
 title: About
 permalink: /
+description: "Engineering Manager at Ninja Van with expertise in technology leadership. NUS Computer Engineering graduate and MBA holder from Quantic School of Business and Technology."
 ---
 
 <img src="profile.jpg" width="300">

@@ -4,6 +4,7 @@ title: "Shinkansen"
 date: 2019-05-23
 categories: blog
 permalink: /shinkansen
+description: "My experience riding Japan's remarkable bullet trains, the Shinkansen, highlighting their perfect safety record, punctuality, and how they embody Japanese cultural values of precision and excellence."
 ---
 
 23 May 2019

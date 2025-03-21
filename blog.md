@@ -2,6 +2,7 @@
 layout: page
 title: Blog
 permalink: /blog/
+description: "Personal reflections and insights from Harsh Gadodia on tech, travel, and professional growth. Read about experiences in the Bay Area, Japan, and more."
 ---
 
 1. [The Bay Area](/the-bay-area)
