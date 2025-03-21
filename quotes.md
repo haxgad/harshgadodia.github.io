@@ -5,22 +5,143 @@ permalink: /quotes/
 description: "A collection of inspiring and thought-provoking quotes curated by Harsh Gadodia from figures including Einstein, Twain, Jobs, and others on life, technology, and wisdom."
 ---
 
+<style>
+  /* Dark mode quote card styling */
+  .main-content ul li,
+  main ul li {
+    background-color: #2a2a2a;
+    border-left: 3px solid #5a5af0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    list-style-type: none; 
+    position: relative;
+  }
+  
+  .main-content ul,
+  main ul {
+    padding-left: 0;
+  }
+  
+  .main-content ul li:hover,
+  main ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .main-content ul li p {
+    margin: 0;
+    font-style: italic;
+    color: #e6e6e6;
+  }
+  
+  /* Author attribution styling */
+  .main-content ul li::after,
+  main ul li::after {
+    content: attr(data-author);
+    display: block;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 12px;
+    color: #a3a3a3;
+    position: relative;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+</style>
+
+<script>
+  // Add data-author attributes to list items for the CSS styling
+  document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('main ul li, .main-content ul li');
+    items.forEach(item => {
+      const text = item.textContent.trim();
+      
+      // Handle different quote patterns
+      // Pattern 1: Normal quotes ending with (Author)
+      // Pattern 2: Quotes with prefix like "(Also known as...)" at the beginning
+      let authorMatch;
+      let quoteText;
+      
+      if (text.endsWith(')')) {
+        // Find the last opening parenthesis that matches the final closing one
+        const lastOpenParenIndex = text.lastIndexOf('(');
+        if (lastOpenParenIndex !== -1) {
+          authorMatch = text.substring(lastOpenParenIndex + 1, text.length - 1).trim();
+          quoteText = text.substring(0, lastOpenParenIndex).trim();
+        }
+      }
+      
+      // Special case for quotes that start with a prefix like "(Also known as...)"
+      if (text.startsWith('(') && !text.startsWith('("')) {
+        const closingParenIndex = text.indexOf(')');
+        const openQuoteIndex = text.indexOf('"', closingParenIndex);
+        
+        if (closingParenIndex !== -1 && openQuoteIndex !== -1) {
+          const prefix = text.substring(0, closingParenIndex + 1).trim();
+          
+          // Find the last occurrence of (Author) at the end
+          const remainingText = text.substring(closingParenIndex + 1).trim();
+          const lastOpenParenIndex = remainingText.lastIndexOf('(');
+          
+          if (lastOpenParenIndex !== -1) {
+            authorMatch = remainingText.substring(lastOpenParenIndex + 1, remainingText.length - 1).trim();
+            quoteText = prefix + " " + remainingText.substring(0, lastOpenParenIndex).trim();
+          }
+        }
+      }
+      
+      if (authorMatch) {
+        // Use em dash for attribution and add formatting
+        item.setAttribute('data-author', '— ' + authorMatch);
+        
+        // Format the quote properly
+        if (quoteText) {
+          // Preserve any prefixes like "(Also known as...)"
+          if (quoteText.startsWith('(') && !quoteText.startsWith('("')) {
+            const closingParenIndex = quoteText.indexOf(')');
+            const prefix = quoteText.substring(0, closingParenIndex + 1).trim();
+            const actualQuote = quoteText.substring(closingParenIndex + 1).trim();
+            
+            // Make sure we're not adding redundant quotes
+            const formattedQuote = actualQuote.startsWith('"') && actualQuote.endsWith('"') 
+              ? actualQuote 
+              : `"${actualQuote.replace(/^"/, '').replace(/"$/, '')}"`;
+              
+            item.innerHTML = `${prefix} ${formattedQuote}`;
+          } else {
+            // Normal quotes without prefix
+            const formattedQuote = quoteText.startsWith('"') && quoteText.endsWith('"') 
+              ? quoteText 
+              : `"${quoteText.replace(/^"/, '').replace(/"$/, '')}"`;
+              
+            item.innerHTML = formattedQuote;
+          }
+        }
+      }
+    });
+  });
+</script>
+
 - "What I would like to have is that we be blessed with a divine discontent. Always not quite satisfied with what we have, always driven to do better." (Lee Hsien Loong)
 
-- “And still, after all this time,
+- "And still, after all this time,
   The sun never says to the earth,
   "You owe Me."
   Look what happens with
   A love like that,
-  It lights the Whole Sky.” (Hafiz)
+  It lights the Whole Sky." (Hafiz)
 
 - "The best writing is rewriting." (E. B. White)
 
 - "Programs must be written for people to read, and only incidentally for machines to execute." (Abelson & Sussman)
 
-- “I have made this longer than usual because I have not had time to make it shorter.” (Blaise Pascal)
+- "I have made this longer than usual because I have not had time to make it shorter." (Blaise Pascal)
 
-- “There are no gods in the universe, no nations, no money, no human rights, no laws, and no justice outside the common imagination of human beings.” (Yuval Noah Harari)
+- "There are no gods in the universe, no nations, no money, no human rights, no laws, and no justice outside the common imagination of human beings." (Yuval Noah Harari)
 
 - "There is no God, but don't tell that to my servant, lest he murder me at night" (Voltaire)
 
