@@ -6,9 +6,12 @@ description: "A collection of inspiring and thought-provoking quotes curated by 
 ---
 
 <style>
-  /* Dark mode quote card styling */
-  .main-content ul li,
-  main ul li {
+  /* Quote card styling */
+  .quote-container {
+    padding-left: 0;
+  }
+  
+  .quote-card {
     background-color: #2a2a2a;
     border-left: 3px solid #5a5af0;
     border-radius: 4px;
@@ -16,30 +19,22 @@ description: "A collection of inspiring and thought-provoking quotes curated by 
     padding: 15px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    list-style-type: none; 
     position: relative;
   }
   
-  .main-content ul,
-  main ul {
-    padding-left: 0;
-  }
-  
-  .main-content ul li:hover,
-  main ul li:hover {
+  .quote-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
   
-  .main-content ul li p {
+  .quote-card p {
     margin: 0;
     font-style: italic;
     color: #e6e6e6;
   }
   
   /* Author attribution styling */
-  .main-content ul li::after,
-  main ul li::after {
+  .quote-card::after {
     content: attr(data-author);
     display: block;
     text-align: right;
@@ -54,9 +49,9 @@ description: "A collection of inspiring and thought-provoking quotes curated by 
 </style>
 
 <script>
-  // Add data-author attributes to list items for the CSS styling
+  // Add data-author attributes to quotes for the CSS styling
   document.addEventListener('DOMContentLoaded', function() {
-    const items = document.querySelectorAll('main ul li, .main-content ul li');
+    const items = document.querySelectorAll('.quote-card');
     items.forEach(item => {
       const text = item.textContent.trim();
       
@@ -126,107 +121,109 @@ description: "A collection of inspiring and thought-provoking quotes curated by 
   });
 </script>
 
-- "What I would like to have is that we be blessed with a divine discontent. Always not quite satisfied with what we have, always driven to do better." (Lee Hsien Loong)
+<div class="quote-container">
+  <div class="quote-card">"What I would like to have is that we be blessed with a divine discontent. Always not quite satisfied with what we have, always driven to do better." (Lee Hsien Loong)</div>
 
-- "And still, after all this time,
+  <div class="quote-card">"And still, after all this time,
   The sun never says to the earth,
   "You owe Me."
   Look what happens with
   A love like that,
-  It lights the Whole Sky." (Hafiz)
+  It lights the Whole Sky." (Hafiz)</div>
 
-- "The best writing is rewriting." (E. B. White)
+  <div class="quote-card">"The best writing is rewriting." (E. B. White)</div>
 
-- "Programs must be written for people to read, and only incidentally for machines to execute." (Abelson & Sussman)
+  <div class="quote-card">"Programs must be written for people to read, and only incidentally for machines to execute." (Abelson & Sussman)</div>
 
-- "I have made this longer than usual because I have not had time to make it shorter." (Blaise Pascal)
+  <div class="quote-card">"I have made this longer than usual because I have not had time to make it shorter." (Blaise Pascal)</div>
 
-- "There are no gods in the universe, no nations, no money, no human rights, no laws, and no justice outside the common imagination of human beings." (Yuval Noah Harari)
+  <div class="quote-card">"There are no gods in the universe, no nations, no money, no human rights, no laws, and no justice outside the common imagination of human beings." (Yuval Noah Harari)</div>
 
-- "There is no God, but don't tell that to my servant, lest he murder me at night" (Voltaire)
+  <div class="quote-card">"There is no God, but don't tell that to my servant, lest he murder me at night" (Voltaire)</div>
 
-- "Whenever you find yourself on the side of the majority, it is time to pause and reflect." (Mark Twain)
+  <div class="quote-card">"Whenever you find yourself on the side of the majority, it is time to pause and reflect." (Mark Twain)</div>
 
-- "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel." (Maya Angelou)
+  <div class="quote-card">"I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel." (Maya Angelou)</div>
 
-- "If you tell the truth, you don't have to remember anything." (Mark Twain)
+  <div class="quote-card">"If you tell the truth, you don't have to remember anything." (Mark Twain)</div>
 
-- "It is the mark of an educated mind to be able to entertain a thought without accepting it." (Aristotle)
+  <div class="quote-card">"It is the mark of an educated mind to be able to entertain a thought without accepting it." (Aristotle)</div>
 
-- "When you are totally at peace with yourself, nothing can shake you." (Deepam Chatterjee)
+  <div class="quote-card">"When you are totally at peace with yourself, nothing can shake you." (Deepam Chatterjee)</div>
 
-- "I love you the more in that I believe you had liked me for my own sake and for nothing else." (John Keats)
+  <div class="quote-card">"I love you the more in that I believe you had liked me for my own sake and for nothing else." (John Keats)</div>
 
-- "Not all those who wander are lost." (J.R.R Tolkien)
+  <div class="quote-card">"Not all those who wander are lost." (J.R.R Tolkien)</div>
 
-- "It was awful-tasting medicine, but I guess the patient needed it. Sometimes life hits you in the head with a brick. Don't lose faith. I'm convinced that the only thing that kept me going was that I loved what I did." (Steve Jobs)
+  <div class="quote-card">"It was awful-tasting medicine, but I guess the patient needed it. Sometimes life hits you in the head with a brick. Don't lose faith. I'm convinced that the only thing that kept me going was that I loved what I did." (Steve Jobs)</div>
 
-- "The golden rule is a good standard which is further improved by doing unto others, wherever reasonable, as they want to be done by." (Karl Popper)
+  <div class="quote-card">"The golden rule is a good standard which is further improved by doing unto others, wherever reasonable, as they want to be done by." (Karl Popper)</div>
 
-- "Hello, solitude. How are you today? Come, sit with me, and I will care for you." (Thich Nhat Hanh)
+  <div class="quote-card">"Hello, solitude. How are you today? Come, sit with me, and I will care for you." (Thich Nhat Hanh)</div>
 
-- "Put your hand on a hot stove for a minute and it seems like an hour. Sit with a pretty girl for an hour, and it seems like a minute. That is relativity." (Albert Einstein)
+  <div class="quote-card">"Put your hand on a hot stove for a minute and it seems like an hour. Sit with a pretty girl for an hour, and it seems like a minute. That is relativity." (Albert Einstein)</div>
 
-- "A happy man is too satisfied with the present to dwell on the future." (Albert Einstein)
+  <div class="quote-card">"A happy man is too satisfied with the present to dwell on the future." (Albert Einstein)</div>
 
-- "We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about." (Charles Kingsley)
+  <div class="quote-card">"We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about." (Charles Kingsley)</div>
 
-- "Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great." (Mark Twain)
+  <div class="quote-card">"Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great." (Mark Twain)</div>
 
-- "Any word you have to hunt for in a thesaurus is the wrong word." (Stephen King)
+  <div class="quote-card">"Any word you have to hunt for in a thesaurus is the wrong word." (Stephen King)</div>
 
-- "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it." (Max Planck)
+  <div class="quote-card">"A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it." (Max Planck)</div>
 
-- "No man who ever held the office of President would congratulate a friend on obtaining it." (John Adams)
+  <div class="quote-card">"No man who ever held the office of President would congratulate a friend on obtaining it." (John Adams)</div>
 
-- "The best way to do something 'lean' is to gather a tight group of people, give them very little money, and very little time." (Bob Klein, Chief Engineer of the F-14 program)
+  <div class="quote-card">"The best way to do something 'lean' is to gather a tight group of people, give them very little money, and very little time." (Bob Klein, Chief Engineer of the F-14 program)</div>
 
-- "He begins working calculus problems in his head as soon as he awakens. He did calculus while driving in his car, while sitting in the living room, and while lying in bed at night." (divorce complaint of Richard Feynman's second wife)
+  <div class="quote-card">"He begins working calculus problems in his head as soon as he awakens. He did calculus while driving in his car, while sitting in the living room, and while lying in bed at night." (divorce complaint of Richard Feynman's second wife)</div>
 
-- "The amount of energy necessary to refute bullshit is an order of magnitude bigger than to produce it." (Paul Kedrosky)
+  <div class="quote-card">"The amount of energy necessary to refute bullshit is an order of magnitude bigger than to produce it." (Paul Kedrosky)</div>
 
-- (Also known as Hanlon's razor) "Never attribute to malice that which is adequately explained by stupidity" (Robert J. Hanlon)
+  <div class="quote-card">(Also known as Hanlon's razor) "Never attribute to malice that which is adequately explained by stupidity" (Robert J. Hanlon)</div>
 
-- (Also known as Hitchen's razor) "What can be asserted without evidence can be dismissed without evidence" (Christopher Hitchens)
+  <div class="quote-card">(Also known as Hitchen's razor) "What can be asserted without evidence can be dismissed without evidence" (Christopher Hitchens)</div>
 
-- "Extraordinary claims require extraordinary evidence" (Carl Sagan)
+  <div class="quote-card">"Extraordinary claims require extraordinary evidence" (Carl Sagan)</div>
 
-- "Being enthusiastic is worth 25 IQ points" (Kevin Kelly)
+  <div class="quote-card">"Being enthusiastic is worth 25 IQ points" (Kevin Kelly)</div>
 
-- "The purpose of a habit is to remove that action from self-negotiation. You no longer expend energy deciding whether to do it. You just do it. Good habits can range from telling the truth, to flossing." (Kevin Kelly)
+  <div class="quote-card">"The purpose of a habit is to remove that action from self-negotiation. You no longer expend energy deciding whether to do it. You just do it. Good habits can range from telling the truth, to flossing." (Kevin Kelly)</div>
 
-- "Be prepared: When you are 90% done any large project (a house, a film, an event, an app) the rest of the myriad details will take a second 90% to complete." (Kevin Kelly)
+  <div class="quote-card">"Be prepared: When you are 90% done any large project (a house, a film, an event, an app) the rest of the myriad details will take a second 90% to complete." (Kevin Kelly)</div>
 
-- "You can talk to someone a hundred years from now when they read your writing" (Neil deGrasse Tyson)
+  <div class="quote-card">"You can talk to someone a hundred years from now when they read your writing" (Neil deGrasse Tyson)</div>
 
-- "You need to over prepare by a factor of 10 to make it look like you did not prepare at all" (Neil deGrasse Tyson)
+  <div class="quote-card">"You need to over prepare by a factor of 10 to make it look like you did not prepare at all" (Neil deGrasse Tyson)</div>
 
-- "It's not enough to be right, you have to be effective" (Cyril deGrasse Tyson)
+  <div class="quote-card">"It's not enough to be right, you have to be effective" (Cyril deGrasse Tyson)</div>
 
-- "Tactics is knowing what to do when there is something to do. Strategy is knowing what to do when there is nothing to do." (Savielly Tartakower)
+  <div class="quote-card">"Tactics is knowing what to do when there is something to do. Strategy is knowing what to do when there is nothing to do." (Savielly Tartakower)</div>
 
-- "There are three deaths. The first is when the body ceases to function. The second is when the body is consigned to the grave. The third is that moment, sometime in the future, when your name is spoken for the last time." (David M. Eagleman)
+  <div class="quote-card">"There are three deaths. The first is when the body ceases to function. The second is when the body is consigned to the grave. The third is that moment, sometime in the future, when your name is spoken for the last time." (David M. Eagleman)</div>
 
-- "You measure yourself by the people who measure themselves by you" (Carter Chambers)
+  <div class="quote-card">"You measure yourself by the people who measure themselves by you" (Carter Chambers)</div>
 
-- "No morality can be founded on authority, even if the authority were divine" (A. J. Ayer)
+  <div class="quote-card">"No morality can be founded on authority, even if the authority were divine" (A. J. Ayer)</div>
 
-- "Strange how paranoia can link up with reality now and then" (Philip K. Dick)
+  <div class="quote-card">"Strange how paranoia can link up with reality now and then" (Philip K. Dick)</div>
 
-- "Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom." (Viktor E. Frankl)
+  <div class="quote-card">"Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom." (Viktor E. Frankl)</div>
 
-- "Though we travel the world over to find the beautiful, we must carry it with us, or we find it not." (Ralph Waldo Emerson)
+  <div class="quote-card">"Though we travel the world over to find the beautiful, we must carry it with us, or we find it not." (Ralph Waldo Emerson)</div>
 
-- "I was born here. I had the audacity of equality" (Hasan Minhaj)
+  <div class="quote-card">"I was born here. I had the audacity of equality" (Hasan Minhaj)</div>
 
-- "Reality has a well known liberal bias" (Stephen Colbert)
+  <div class="quote-card">"Reality has a well known liberal bias" (Stephen Colbert)</div>
 
-- "All of humanity's problems stem from man's inability to sit quietly in a room alone" (Blaise Pascal)
+  <div class="quote-card">"All of humanity's problems stem from man's inability to sit quietly in a room alone" (Blaise Pascal)</div>
 
-- "If two people always agree on everything, then one of them is dispensable" (Winston Churchill)
+  <div class="quote-card">"If two people always agree on everything, then one of them is dispensable" (Winston Churchill)</div>
 
-- "Programming isn't about what you know; it's about what you can figure out." (Chris Pine)
+  <div class="quote-card">"Programming isn't about what you know; it's about what you can figure out." (Chris Pine)</div>
 
-- "Train employees well enough they could get another job, but treat them well enough so they never want to" (Kevin Kelly)
+  <div class="quote-card">"Train employees well enough they could get another job, but treat them well enough so they never want to" (Kevin Kelly)</div>
 
-- "You can reduce the annoyance of someone's stupid belief by increasing your understanding of why they believe it" (Kevin Kelly)
+  <div class="quote-card">"You can reduce the annoyance of someone's stupid belief by increasing your understanding of why they believe it" (Kevin Kelly)</div>
+</div>
