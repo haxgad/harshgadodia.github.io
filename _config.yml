@@ -19,14 +19,26 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Harsh Gadodia
+description: "Personal website of Harsh Gadodia, Engineering Manager at Ninja Van. Sharing thoughts on technology, management, and personal experiences."
+author: Harsh Gadodia
+github_username: haxgad
+linkedin_username: harsh-gadodia
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://haxgad.com" # the base hostname & protocol for your site
 
 plugins:
   - jekyll-remote-theme
 
 remote_theme: just-the-docs/just-the-docs
-color_scheme: dark
+color_scheme: dark # Default theme
+
+# Configure theme
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
