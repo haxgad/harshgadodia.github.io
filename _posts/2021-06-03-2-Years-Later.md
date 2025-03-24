@@ -7,6 +7,8 @@ permalink: /2-years
 description: "Reflections on two years as a software engineer, sharing personal insights on problem-solving, team dynamics, and maintaining motivation in the tech industry."
 ---
 
+# 2 Years Later
+
 3 June 2021
 
 Time flies, and it's been yet another year working as a software engineer for me.

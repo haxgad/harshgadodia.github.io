@@ -7,6 +7,8 @@ permalink: /the-bay-area
 description: "Reflections on my transformative year living and working in Silicon Valley, exploring the work culture, professional growth as an intern at Epic!, and the contrast with Singapore's more conservative environment."
 ---
 
+# The Bay Area
+
 6 June 2018
 
 In 2017, I had the incredible opportunity to live and work in the San Francisco Bay Area, California. It was one of the most transformative personal and professional experiences of my life. Being in the Bay Area was eye-opening; I learned a lot about myself by stepping out of my comfort zone, though calling it "outside my comfort zone" seems unfair. Over the course of the year, I not only grew comfortable but also developed a deeper appreciation for what it means to be liberal, American, and perhaps, truly free. I can never forget the sign next to the shared swimming pool in the estate that I stayed: "_Usage of drugs and consumption of alcohol in the pool not encouraged_."

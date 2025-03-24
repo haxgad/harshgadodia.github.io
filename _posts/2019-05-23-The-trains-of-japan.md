@@ -7,6 +7,8 @@ permalink: /shinkansen
 description: "My experience riding Japan's remarkable bullet trains, the Shinkansen, highlighting their perfect safety record, punctuality, and how they embody Japanese cultural values of precision and excellence."
 ---
 
+# Shinkansen
+
 23 May 2019
 
 One of the many remarkable experiences I had in Japan was riding the Shinkansen, or bullet train. Of all the incredible things to see and do in Japan, the Shinkansen stands out as my favorite. This engineering marvel exemplifies the pinnacle of safety, punctuality, and technological innovation.

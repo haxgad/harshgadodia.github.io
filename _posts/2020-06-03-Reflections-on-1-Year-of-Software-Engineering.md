@@ -7,6 +7,8 @@ permalink: /1-year
 description: "Lessons learned from a year as a software engineer, covering learning strategies, code quality, mentorship, and avoiding burnout in the fast-paced tech industry."
 ---
 
+# Reflections on 1 Year of Software Engineering
+
 3 June 2020
 
 Today marks one year of working full-time as a software engineer. While I'm still learning the trade, here are some things I wish I knew when I first started off.
