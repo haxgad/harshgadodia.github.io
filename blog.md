@@ -51,38 +51,12 @@ description: "Personal reflections and insights from Harsh Gadodia on tech, trav
 </style>
 
 <div class="blog-container">
-  <div class="blog-card">
-    <div class="blog-title">
-      <a href="/the-bay-area">The Bay Area</a>
+  {% for post in site.posts %}
+    <div class="blog-card">
+      <div class="blog-title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </div>
+      <p class="blog-description">{{ post.description }}</p>
     </div>
-    <p class="blog-description">Reflections on life in Silicon Valley</p>
-  </div>
-  
-  <div class="blog-card">
-    <div class="blog-title">
-      <a href="/shinkansen">Shinkansen</a>
-    </div>
-    <p class="blog-description">Experiences with Japan's bullet train system</p>
-  </div>
-  
-  <div class="blog-card">
-    <div class="blog-title">
-      <a href="/america">This is America</a>
-    </div>
-    <p class="blog-description">Observations on American culture and society</p>
-  </div>
-  
-  <div class="blog-card">
-    <div class="blog-title">
-      <a href="/1-year">Reflections on 1 Year of Software Engineering</a>
-    </div>
-    <p class="blog-description">Lessons learned after one year in the tech industry</p>
-  </div>
-  
-  <div class="blog-card">
-    <div class="blog-title">
-      <a href="/2-years">2 Years later</a>
-    </div>
-    <p class="blog-description">Looking back on two years of professional growth</p>
-  </div>
+  {% endfor %}
 </div>
