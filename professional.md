@@ -21,9 +21,13 @@ description: "Professional profile of Harsh Gadodia, Engineering Manager at Ninj
   .linkedin-fallback {
     margin-top: 20px;
     font-size: 16px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-left: 3px solid #0077b5;
+    border-radius: 4px;
   }
 </style>
 
 <div class="linkedin-fallback">
-  If the LinkedIn badge doesn't load, you can view my profile directly at <a href="https://www.linkedin.com/in/harsh-gadodia" target="_blank">linkedin.com/in/harsh-gadodia</a>
+  View my <a href="https://www.linkedin.com/in/harsh-gadodia" target="_blank">LinkedIn</a> profile
 </div>
