@@ -5,6 +5,7 @@ date: 2020-06-03
 categories: blog
 permalink: /1-year
 description: "Lessons learned from a year as a software engineer, covering learning strategies, code quality, mentorship, and avoiding burnout in the fast-paced tech industry."
+published: false
 ---
 
 # Reflections on 1 Year of Software Engineering

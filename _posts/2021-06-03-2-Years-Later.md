@@ -5,6 +5,7 @@ date: 2021-06-03
 categories: blog
 permalink: /2-years
 description: "Reflections on two years as a software engineer, sharing personal insights on problem-solving, team dynamics, and maintaining motivation in the tech industry."
+published: false
 ---
 
 # 2 Years Later

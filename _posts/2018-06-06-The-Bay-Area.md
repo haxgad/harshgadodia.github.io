@@ -5,6 +5,7 @@ date: 2018-06-06
 categories: blog
 permalink: /the-bay-area
 description: "Reflections on my transformative year living and working in Silicon Valley, exploring the work culture, professional growth as an intern at Epic!, and the contrast with Singapore's more conservative environment."
+published: false
 ---
 
 # The Bay Area
