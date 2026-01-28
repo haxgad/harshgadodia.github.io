@@ -28,6 +28,10 @@ url: "https://haxgad.com" # the base hostname & protocol for your site
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+timezone: Asia/Singapore
 
 remote_theme: just-the-docs/just-the-docs
 color_scheme: dark # Default theme
