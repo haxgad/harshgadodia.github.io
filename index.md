@@ -51,9 +51,9 @@ description: "Engineering Manager at Ninja Van with expertise in technology lead
   <img src="profile.jpg" class="profile-image" alt="Harsh Gadodia">
   
   <div class="profile-content">
-    <p>Hi, I'm Harsh. I'm an Engineering Manager at <a href="https://www.ninjavan.co/en-sg/about-us" target="_blank">Ninja Van</a>, a logistics-technology unicorn based in Singapore, where I reside.</p>
+    <p>Hi, I'm Harsh. I'm a Software Engineer and I live in Singapore.</p>
     
-    <p>I graduated from the National University of Singapore in 2019 with a major in Computer Engineering. During my studies, I was deeply involved in the University Scholars Programme, now known as <a href="https://nuscollege.nus.edu.sg/" target="_blank">NUSCollege</a>, which allowed me to explore a broad range of subjects beyond engineering. In my second year of college, I interned as an iOS developer at <a href="https://www.getepic.com" target="_blank">Epic!</a>, an educational technology startup in the Bay Area.</p>
+    <p>I graduated from the National University of Singapore with a major in Computer Engineering. During my studies, I was also deeply involved in the University Scholars Programme, now known as <a href="https://nuscollege.nus.edu.sg/" target="_blank">NUSCollege</a>, which allowed me to explore a broad range of subjects beyond my major. In my second year of college, I interned as an iOS developer at <a href="https://www.getepic.com" target="_blank">Epic!</a>, an educational technology startup in the Bay Area.</p>
     
     <p>In 2024, I completed my MBA at the <a href="https://quantic.edu/about/" target="_blank">Quantic School of Business and Technology</a>.</p>
   </div>
