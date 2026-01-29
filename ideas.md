@@ -70,11 +70,3 @@ description: "Explore interesting concepts and psychological phenomena curated b
     </div>
     <p class="idea-description">When an attempt to hide, remove, or censor information has the unintended consequence of further publicizing that information</p>
   </div>
-  
-  <div class="idea-card">
-    <div class="idea-title">
-      <a href="https://www.vox.com/culture/2018/10/11/17933686/me-too-separating-artist-art-johnny-depp-woody-allen-michael-jackson-louis-ck" target="_blank">What do we do when the art we love was created by a monster?</a>
-    </div>
-    <p class="idea-description">An article exploring the ethical dilemma of separating art from the artist in the context of their personal transgressions</p>
-  </div>
-</div>
