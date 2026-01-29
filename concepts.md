@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Ideas
-permalink: /ideas/
+title: Concepts
+permalink: /concepts/
 description: "Explore interesting concepts and psychological phenomena curated by Harsh Gadodia, including the Dunning-Kruger Effect, Imposter Syndrome, and thought-provoking articles."
 ---
 
@@ -69,4 +69,25 @@ description: "Explore interesting concepts and psychological phenomena curated b
       <a href="https://en.wikipedia.org/wiki/Streisand_effect" target="_blank">The Streisand Effect</a>
     </div>
     <p class="idea-description">When an attempt to hide, remove, or censor information has the unintended consequence of further publicizing that information</p>
+  </div>
+
+  <div class="idea-card">
+    <div class="idea-title">
+      <a href="https://en.wikipedia.org/wiki/Paradox_of_tolerance" target="_blank">The Paradox of Tolerance</a>
+    </div>
+    <p class="idea-description">If a society is tolerant without limit, its ability to be tolerant will eventually be destroyed by the intolerant</p>
+  </div>
+
+  <div class="idea-card">
+    <div class="idea-title">
+      <a href="https://en.wikipedia.org/wiki/Sunk_cost#Fallacy_effect" target="_blank">The Sunk Cost Fallacy</a>
+    </div>
+    <p class="idea-description">Continuing a course of action because of past investment rather than future value</p>
+  </div>
+
+  <div class="idea-card">
+    <div class="idea-title">
+      <a href="https://en.wikipedia.org/wiki/Survivorship_bias" target="_blank">Survivorship Bias</a>
+    </div>
+    <p class="idea-description">Focusing on successes while ignoring failures that didn't survive to be examined</p>
   </div>
