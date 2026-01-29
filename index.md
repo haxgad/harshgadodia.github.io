@@ -2,7 +2,7 @@
 layout: home
 title: About
 permalink: /
-description: "Engineering Manager at Ninja Van with expertise in technology leadership. NUS Computer Engineering graduate and MBA holder from Quantic School of Business and Technology."
+description: "Software Engineer in Singapore. NUS Computer Engineering graduate with an MBA from Quantic School of Business and Technology."
 ---
 
 <style>
@@ -51,10 +51,11 @@ description: "Engineering Manager at Ninja Van with expertise in technology lead
   <img src="profile.jpg" class="profile-image" alt="Harsh Gadodia">
   
   <div class="profile-content">
-    <p>Hi, I'm Harsh. I'm a Software Engineer and I live in Singapore.</p>
-    
-    <p>I graduated from the National University of Singapore with a major in Computer Engineering. During my studies, I was also deeply involved in the University Scholars Programme, now known as <a href="https://nuscollege.nus.edu.sg/" target="_blank">NUSCollege</a>, which allowed me to explore a broad range of subjects beyond my major. In my second year of college, I interned as an iOS developer at <a href="https://www.getepic.com" target="_blank">Epic!</a>, an educational technology startup in the Bay Area.</p>
-    
+    <p>Hi, I'm Harsh, a Software Engineer based in Singapore.</p>
+
+    <p>I studied Computer Engineering at the National University of Singapore and was part of the <a href="https://nuscollege.nus.edu.sg/" target="_blank">University Scholars Programme</a> (now NUSCollege), a liberal arts programme. In my second year, I interned as an iOS developer at <a href="https://www.getepic.com" target="_blank">Epic!</a>, an edtech startup in the Bay Area.</p>
+
     <p>In 2024, I completed my MBA at the <a href="https://quantic.edu/about/" target="_blank">Quantic School of Business and Technology</a>.</p>
+
   </div>
 </div>
