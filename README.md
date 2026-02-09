@@ -11,8 +11,8 @@ Personal website of Harsh Gadodia — [haxgad.com](https://haxgad.com)
 ## Local development
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 The site will be available at `http://localhost:4321`.
@@ -20,7 +20,7 @@ The site will be available at `http://localhost:4321`.
 ## Build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Deployment
