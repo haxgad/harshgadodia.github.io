@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { quotes } from "../data/quotes";
+---
+
+<BaseLayout sideBarActiveItemID="quotes">
+  <div class="pb-12 mt-5">
+    <div class="text-3xl w-full font-bold mb-6">Quotes</div>
+    <div class="space-y-4">
+      {
+        quotes.map((quote) => (
+          <div class="card bg-base-200 shadow-md">
+            <div class="card-body">
+              <p class="italic whitespace-pre-line">{quote.text}</p>
+              <div class="divider my-1" />
+              <p class="text-right text-sm opacity-70">— {quote.author}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

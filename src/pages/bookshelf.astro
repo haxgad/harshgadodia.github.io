@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout sideBarActiveItemID="bookshelf">
+  <div class="pb-12 mt-5">
+    <div class="text-3xl w-full font-bold mb-4">Bookshelf</div>
+
+    <p class="mb-6">
+      <a
+        href="https://www.goodreads.com/user/show/122474111"
+        target="_blank"
+        class="link link-primary"
+      >
+        Connect with me on Goodreads
+      </a>
+    </p>
+
+    <div id="gr_grid_widget_1715093350"></div>
+
+    <script
+      src="https://www.goodreads.com/review/grid_widget/122474111?cover_size=medium&hide_link=true&hide_title=true&num_books=200&order=d&shelf=read&sort=date_added&widget_id=1715093350"
+      is:inline
+    ></script>
+
+  </div>
+
+  <style is:global>
+    #gr_grid_widget_1715093350 {
+      width: 100%;
+    }
+
+    .gr_grid_container {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(98px, 1fr)) !important;
+      gap: 12px !important;
+      justify-items: center;
+    }
+
+    .gr_grid_book_container {
+      width: 98px !important;
+      padding: 0 !important;
+    }
+
+    .gr_grid_book_container a {
+      display: block;
+    }
+
+    .gr_grid_book_container img {
+      width: 98px !important;
+      height: auto !important;
+      border-radius: 4px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gr_grid_book_container img:hover {
+      transform: scale(1.05);
+    }
+
+    .gr_grid_book_container noscript {
+      display: none;
+    }
+  </style>
+</BaseLayout>

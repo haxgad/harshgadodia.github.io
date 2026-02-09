@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { concepts } from "../data/concepts";
+---
+
+<BaseLayout sideBarActiveItemID="concepts">
+  <div class="pb-12 mt-5">
+    <div class="text-3xl w-full font-bold mb-6">Concepts</div>
+    <div class="space-y-4">
+      {
+        concepts.map((concept) => (
+          <div class="card bg-base-200 shadow-md">
+            <div class="card-body">
+              <h2 class="card-title">
+                <a
+                  href={concept.url}
+                  target="_blank"
+                  class="link link-primary"
+                >
+                  {concept.title}
+                </a>
+              </h2>
+              <p>{concept.description}</p>
+              <p class="text-sm italic opacity-70">{concept.example}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout sideBarActiveItemID="professional">
+  <div class="pb-12 mt-5">
+    <div class="text-3xl w-full font-bold mb-6">Professional</div>
+
+    <div class="mb-8">
+      <div
+        class="LI-profile-badge"
+        data-version="v1"
+        data-size="large"
+        data-locale="en_US"
+        data-type="vertical"
+        data-theme="dark"
+        data-vanity="harsh-gadodia"
+      >
+        <a
+          class="LI-simple-link"
+          href="https://www.linkedin.com/in/harsh-gadodia"
+        ></a>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 shadow-md">
+      <div class="card-body">
+        <p>
+          <a
+            href="https://www.linkedin.com/in/harsh-gadodia"
+            target="_blank"
+            class="link link-primary"
+          >
+            View my LinkedIn profile
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script
+    type="text/javascript"
+    src="https://platform.linkedin.com/badges/js/profile.js"
+    async
+    defer
+    is:inline></script>
+</BaseLayout>
