@@ -10,7 +10,7 @@ description: "Software Engineer in Singapore. NUS Computer Engineering graduate 
     margin: 0 auto;
     max-width: 800px;
   }
-  
+
   .profile-image {
     width: 250px;
     border-radius: 8px;
@@ -18,39 +18,26 @@ description: "Software Engineer in Singapore. NUS Computer Engineering graduate 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .profile-image:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
   }
-  
+
   .profile-content {
     line-height: 1.8;
     font-size: 16px;
   }
-  
+
   .profile-content p {
     margin-bottom: 20px;
-  }
-  
-  .profile-content a {
-    color: #5a5af0;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    border-bottom: 1px dotted #5a5af0;
-    padding-bottom: 1px;
-  }
-  
-  .profile-content a:hover {
-    color: #7f7ff5;
-    border-bottom: 1px solid #7f7ff5;
   }
 </style>
 
 <div class="profile-container">
   <img src="profile.jpg" class="profile-image" alt="Harsh Gadodia">
-  
-  <div class="profile-content">
+
+  <div class="profile-content content-link">
     <p>Hi, I'm Harsh, a Software Engineer based in Singapore.</p>
 
     <p>I studied Computer Engineering at the National University of Singapore and was part of the <a href="https://nuscollege.nus.edu.sg/" target="_blank">University Scholars Programme</a> (now NUSCollege), a liberal arts programme. In my second year, I interned as an iOS developer at <a href="https://www.getepic.com" target="_blank">Epic!</a>, an edtech startup in the Bay Area.</p>

@@ -7,3 +7,5 @@ gem "just-the-docs", "0.9.0" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
 
 gem "jekyll-remote-theme"
+gem "jekyll-sitemap"
+gem "jekyll-seo-tag"

@@ -6,6 +6,7 @@ categories: blog
 permalink: /shinkansen
 description: "My experience riding Japan's remarkable bullet trains, the Shinkansen, highlighting their perfect safety record, punctuality, and how they embody Japanese cultural values of precision and excellence."
 published: false
+favicon: "✍️"
 ---
 
 # Shinkansen

@@ -6,6 +6,7 @@ categories: blog
 permalink: /america
 description: "A brief reflection on my year living in America in 2017, highlighting a uniquely American cultural observation through a simple pool sign."
 published: false
+favicon: "✍️"
 ---
 
 # This is America
