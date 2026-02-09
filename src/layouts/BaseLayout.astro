@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+
 import SideBar from "../components/SideBar.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -33,7 +33,7 @@ const {
             <slot />
           </main>
         </div>
-        <Footer />
+
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
