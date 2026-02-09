@@ -25,3 +25,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   </div>
 </BaseLayout>
+
+<style is:global>
+  .gr_grid_book_container {
+    padding: 10px;
+    display: inline-block;
+  }
+  .gr_grid_book_container img {
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  .gr_grid_book_container img:hover {
+    transform: scale(1.05);
+  }
+  .gr_grid_book_container noscript {
+    display: none;
+  }
+</style>
