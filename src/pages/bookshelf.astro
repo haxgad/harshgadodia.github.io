@@ -10,6 +10,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <a
         href="https://www.goodreads.com/user/show/122474111"
         target="_blank"
+        rel="noopener noreferrer"
         class="link link-primary"
       >
         Connect with me on Goodreads
@@ -36,6 +37,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       (function() {
         const skeleton = document.getElementById('bookshelf-skeleton');
         const widget = document.getElementById('gr_grid_widget_1715093350');
+        const maxRetries = 20; // 10 seconds max
+        let retries = 0;
 
         function checkWidgetLoaded() {
           if (widget && widget.children.length > 0) {
@@ -43,8 +46,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             setTimeout(() => {
               skeleton.style.display = 'none';
             }, 500);
-          } else {
+          } else if (retries < maxRetries) {
+            retries++;
             setTimeout(checkWidgetLoaded, 500);
+          } else {
+            // Widget failed to load, hide skeleton and show fallback
+            skeleton.innerHTML = '<p class="text-base-content/60">Unable to load bookshelf. <a href="https://www.goodreads.com/user/show/122474111" class="link link-primary" target="_blank" rel="noopener noreferrer">View on Goodreads</a></p>';
+            skeleton.style.display = 'block';
+            skeleton.style.opacity = '1';
           }
         }
 

@@ -8,10 +8,10 @@
   "theme_color": "#1d232a",
   "icons": [
     {
-      "src": "/profile.jpg",
+      "src": "/profile.webp",
       "sizes": "512x512",
-      "type": "image/jpeg",
-      "purpose": "any maskable"
+      "type": "image/webp",
+      "purpose": "any"
     }
   ]
 }

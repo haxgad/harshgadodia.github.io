@@ -1,13 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/bookshelf", label: "Bookshelf" },
-  { href: "/concepts", label: "Concepts" },
-  { href: "/links", label: "Links" },
-  { href: "/quotes", label: "Quotes" },
-];
+import { NAV_LINKS } from "../config";
 ---
 
 <BaseLayout title="404: Not Found" includeSidebar={false}>
@@ -21,7 +14,7 @@ const navLinks = [
       Maybe you'd like to explore one of these instead?
     </p>
     <div class="flex flex-wrap justify-center gap-3">
-      {navLinks.map((link) => (
+      {NAV_LINKS.map((link) => (
         <a
           href={link.href}
           class="btn btn-outline btn-primary"
