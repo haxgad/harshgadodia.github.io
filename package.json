@@ -12,20 +12,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.3",
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "3.2.1",
-    "@astrojs/tailwind": "^5.0.3",
-    "astro": "^4.0.2",
-    "daisyui": "^4.4.10",
-    "dayjs": "^1.11.9",
-    "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.5"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "3.7.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.2",
+    "daisyui": "^5.5.18",
+    "dayjs": "^1.11.19",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
