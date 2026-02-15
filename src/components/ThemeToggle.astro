@@ -29,37 +29,33 @@
   </svg>
 </label>
 
-<script is:inline>
-(function() {
-  const toggles = document.querySelectorAll('.theme-toggle');
-  const html = document.documentElement;
+<script>
+  function initThemeToggle() {
+    const toggles = document.querySelectorAll('.theme-toggle');
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
 
-  function getPreferredTheme() {
-    const stored = localStorage.getItem('theme');
-    if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  }
-
-  function setTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    // Sync toggle state with current theme
     toggles.forEach(toggle => {
-      toggle.checked = theme === 'light';
+      toggle.checked = currentTheme === 'light';
+
+      // Remove old listeners by cloning
+      const newToggle = toggle.cloneNode(true);
+      newToggle.checked = currentTheme === 'light';
+      toggle.parentNode?.replaceChild(newToggle, toggle);
+
+      newToggle.addEventListener('change', () => {
+        const theme = newToggle.checked ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        // Sync other toggles
+        document.querySelectorAll('.theme-toggle').forEach(t => {
+          t.checked = theme === 'light';
+        });
+      });
     });
   }
 
-  setTheme(getPreferredTheme());
-
-  toggles.forEach(toggle => {
-    toggle.addEventListener('change', () => {
-      setTheme(toggle.checked ? 'light' : 'dark');
-    });
-  });
-
-  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-      setTheme(e.matches ? 'light' : 'dark');
-    }
-  });
-})();
+  // Run on initial load and after View Transitions
+  initThemeToggle();
+  document.addEventListener('astro:after-swap', initThemeToggle);
 </script>

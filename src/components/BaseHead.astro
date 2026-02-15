@@ -17,11 +17,25 @@ const { title, description, image = '/social_img.webp', ogType = 'website' } = A
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="canonical" href={Astro.url} />
-<link rel="icon" type="image/webp" href="/profile.webp" />
-<link rel="apple-touch-icon" href="/profile.webp" />
-<link rel="manifest" href="/manifest.json" />
+<link rel="icon" type="image/jpeg" href="/profile.jpg" />
+<link rel="apple-touch-icon" href="/profile.jpg" />
 <meta name="theme-color" content="#1d232a" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Apply theme immediately and persist across View Transitions -->
+<script is:inline>
+  (function() {
+    const theme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
+  // Preserve theme during View Transitions
+  document.addEventListener('astro:before-swap', (e) => {
+    const theme = document.documentElement.getAttribute('data-theme');
+    e.newDocument.documentElement.setAttribute('data-theme', theme);
+  });
+</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
