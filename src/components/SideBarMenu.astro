@@ -1,17 +1,33 @@
 ---
-const { sideBarActiveItemID } = Astro.props;
+const pathname = Astro.url.pathname;
 const activeClass = "bg-base-300";
+
+const navItems = [
+  { id: "home", href: "/", label: "About" },
+  { id: "bookshelf", href: "/bookshelf", label: "Bookshelf" },
+  { id: "concepts", href: "/concepts", label: "Concepts" },
+  { id: "links", href: "/links", label: "Links" },
+  { id: "quotes", href: "/quotes", label: "Quotes" },
+];
+
+function isActive(href: string): boolean {
+  if (href === "/") {
+    return pathname === "/" || pathname === "";
+  }
+  return pathname === href || pathname.startsWith(href + "/");
+}
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">About</a></li>
-    <li><a class="py-3 text-base" id="bookshelf" href="/bookshelf">Bookshelf</a></li>
-    <li><a class="py-3 text-base" id="concepts" href="/concepts">Concepts</a></li>
-    <li><a class="py-3 text-base" id="links" href="/links">Links</a></li>
-    <li><a class="py-3 text-base" id="quotes" href="/quotes">Quotes</a></li>
+    {navItems.map((item) => (
+        <li>
+            <a
+                class:list={["py-3 text-base", { [activeClass]: isActive(item.href) }]}
+                id={item.id}
+                href={item.href}
+            >
+                {item.label}
+            </a>
+        </li>
+    ))}
 </ul>
-
-<script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
-</script>

@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout sideBarActiveItemID="bookshelf">
+<BaseLayout>
   <div class="pb-12 mt-5">
-    <div class="text-3xl w-full font-bold mb-4">Bookshelf</div>
+    <div class="text-2xl sm:text-3xl w-full font-bold mb-4">Bookshelf</div>
 
     <p class="mb-6">
       <a
@@ -16,12 +16,38 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </a>
     </p>
 
+    <!-- Loading skeleton -->
+    <div id="bookshelf-skeleton" class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
+      {Array.from({ length: 16 }).map(() => (
+        <div class="animate-pulse">
+          <div class="bg-base-300 rounded-lg aspect-[2/3]"></div>
+        </div>
+      ))}
+    </div>
+
     <div id="gr_grid_widget_1715093350"></div>
 
     <script
       src="https://www.goodreads.com/review/grid_widget/122474111?cover_size=medium&hide_link=true&hide_title=true&num_books=200&order=d&shelf=read&sort=date_added&widget_id=1715093350"
       is:inline
     ></script>
+
+    <script is:inline>
+      (function() {
+        const skeleton = document.getElementById('bookshelf-skeleton');
+        const widget = document.getElementById('gr_grid_widget_1715093350');
+
+        function checkWidgetLoaded() {
+          if (widget && widget.children.length > 0) {
+            skeleton.style.display = 'none';
+          } else {
+            setTimeout(checkWidgetLoaded, 500);
+          }
+        }
+
+        checkWidgetLoaded();
+      })();
+    </script>
 
   </div>
 </BaseLayout>
