@@ -1,16 +1,3 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
-
-/* Typography utilities */
-.content-body {
-    @apply text-lg leading-relaxed;
-}
-
-.page-header {
-    @apply text-3xl w-full font-bold mb-6;
-}
-
-.section-header {
-    @apply text-2xl font-bold mb-4;
-}
