@@ -25,6 +25,7 @@ function isActive(href: string): boolean {
                 class:list={["py-3 text-base", { [activeClass]: isActive(item.href) }]}
                 id={item.id}
                 href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
             >
                 {item.label}
             </a>

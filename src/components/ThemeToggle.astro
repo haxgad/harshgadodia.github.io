@@ -2,7 +2,7 @@
 ---
 
 <label class="swap swap-rotate" aria-label="Toggle theme">
-  <input type="checkbox" id="theme-toggle" class="theme-controller" />
+  <input type="checkbox" class="theme-toggle theme-controller" />
 
   <!-- Sun icon (shown when dark mode is active) -->
   <svg
@@ -29,7 +29,7 @@
 
 <script is:inline>
 (function() {
-  const toggle = document.getElementById('theme-toggle');
+  const toggles = document.querySelectorAll('.theme-toggle');
   const html = document.documentElement;
 
   // Get stored theme or system preference
@@ -39,19 +39,23 @@
     return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   }
 
-  // Apply theme
+  // Apply theme and sync all toggles
   function setTheme(theme) {
     html.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    toggle.checked = theme === 'light';
+    toggles.forEach(toggle => {
+      toggle.checked = theme === 'light';
+    });
   }
 
   // Initialize
   setTheme(getPreferredTheme());
 
-  // Handle toggle
-  toggle.addEventListener('change', () => {
-    setTheme(toggle.checked ? 'light' : 'dark');
+  // Handle toggle changes
+  toggles.forEach(toggle => {
+    toggle.addEventListener('change', () => {
+      setTheme(toggle.checked ? 'light' : 'dark');
+    });
   });
 
   // Handle system preference changes

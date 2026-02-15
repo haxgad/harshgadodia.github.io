@@ -1,0 +1,17 @@
+{
+  "name": "Harsh Gadodia",
+  "short_name": "Harsh G",
+  "description": "Personal website of Harsh Gadodia - Software Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1d232a",
+  "theme_color": "#1d232a",
+  "icons": [
+    {
+      "src": "/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

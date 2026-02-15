@@ -17,7 +17,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
 
     <!-- Loading skeleton -->
-    <div id="bookshelf-skeleton" class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
+    <div id="bookshelf-skeleton" class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3 transition-opacity duration-500">
       {Array.from({ length: 16 }).map(() => (
         <div class="animate-pulse">
           <div class="bg-base-300 rounded-lg aspect-[2/3]"></div>
@@ -39,7 +39,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         function checkWidgetLoaded() {
           if (widget && widget.children.length > 0) {
-            skeleton.style.display = 'none';
+            skeleton.style.opacity = '0';
+            setTimeout(() => {
+              skeleton.style.display = 'none';
+            }, 500);
           } else {
             setTimeout(checkWidgetLoaded, 500);
           }
