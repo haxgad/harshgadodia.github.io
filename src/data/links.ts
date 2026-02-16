@@ -91,8 +91,7 @@ export const links: LinkSection[] = [
         url: "https://yangshun.github.io/tech-interview-handbook/",
       },
       {
-        title:
-          "Why is processing a sorted array faster than processing an unsorted array?",
+        title: "Why is processing a sorted array faster than processing an unsorted array?",
         url: "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array",
       },
       {
@@ -104,8 +103,7 @@ export const links: LinkSection[] = [
         url: "https://github.com/ksindi/managers-playbook",
       },
       {
-        title:
-          "Never attribute to stupidity that which is adequately explained by opportunity cost",
+        title: "Never attribute to stupidity that which is adequately explained by opportunity cost",
         url: "https://erikbern.com/2020/03/10/never-attribute-to-stupidity-that-which-is-adequately-explained-by-opportunity-cost.html",
       },
       {
@@ -113,8 +111,7 @@ export const links: LinkSection[] = [
         url: "https://muldoon.cloud/programming/2020/04/17/programming-rules-thumb.html",
       },
       {
-        title:
-          "Why is it recommended to have empty line in the end of a source file?",
+        title: "Why is it recommended to have empty line in the end of a source file?",
         url: "https://stackoverflow.com/questions/2287967/why-is-it-recommended-to-have-empty-line-in-the-end-of-a-source-file",
       },
       {

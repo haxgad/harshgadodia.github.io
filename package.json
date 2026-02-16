@@ -9,7 +9,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "biome check src",
+    "lint:fix": "biome check --write src",
+    "format": "biome format --write src"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
@@ -24,7 +27,12 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
+      "lefthook",
       "sharp"
     ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.1",
+    "lefthook": "^2.1.1"
   }
 }

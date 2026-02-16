@@ -9,127 +9,103 @@ export const concepts: Concept[] = [
   {
     title: "The Cobra Effect",
     url: "https://en.wikipedia.org/wiki/Perverse_incentive#The_original_cobra_effect",
-    description:
-      "When a solution to a problem makes the problem worse due to unintended consequences",
-    example:
-      "British offered bounties for dead cobras, so people bred cobras to collect the reward.",
+    description: "When a solution to a problem makes the problem worse due to unintended consequences",
+    example: "British offered bounties for dead cobras, so people bred cobras to collect the reward.",
   },
   {
     title: "The Streisand Effect",
     url: "https://en.wikipedia.org/wiki/Streisand_effect",
     description:
       "When an attempt to hide, remove, or censor information has the unintended consequence of further publicizing that information",
-    example:
-      "Barbra Streisand sued to remove photos of her home from the internet, causing millions to view them.",
+    example: "Barbra Streisand sued to remove photos of her home from the internet, causing millions to view them.",
   },
   {
     title: "The Paradox of Tolerance",
     url: "https://en.wikipedia.org/wiki/Paradox_of_tolerance",
     description:
       "If a society is tolerant without limit, its ability to be tolerant will eventually be destroyed by the intolerant",
-    example:
-      "An online platform with no moderation eventually becomes dominated by its most extreme users.",
+    example: "An online platform with no moderation eventually becomes dominated by its most extreme users.",
   },
   {
     title: "Cunningham's Law",
     url: "https://en.wikipedia.org/wiki/Ward_Cunningham#Cunningham's_Law",
     description:
       "The best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer",
-    example:
-      'Post "The first iPhone was released in 2008" and watch people rush to correct you.',
+    example: 'Post "The first iPhone was released in 2008" and watch people rush to correct you.',
   },
   {
     title: "The Paradox of Choice",
     url: "https://en.wikipedia.org/wiki/The_Paradox_of_Choice",
-    description:
-      "Too many options can lead to anxiety, decision paralysis, and dissatisfaction",
-    example:
-      "Spending 30 minutes browsing Netflix, then giving up without watching anything.",
+    description: "Too many options can lead to anxiety, decision paralysis, and dissatisfaction",
+    example: "Spending 30 minutes browsing Netflix, then giving up without watching anything.",
   },
   {
     title: "Survivorship Bias",
     url: "https://en.wikipedia.org/wiki/Survivorship_bias",
-    description:
-      "Focusing on successes while ignoring failures that didn't survive to be examined",
-    example:
-      "Studying successful startups while ignoring thousands that failed using the same strategies.",
+    description: "Focusing on successes while ignoring failures that didn't survive to be examined",
+    example: "Studying successful startups while ignoring thousands that failed using the same strategies.",
   },
   {
     title: "The Hedonic Treadmill",
     url: "https://en.wikipedia.org/wiki/Hedonic_treadmill",
     description:
       "People tend to return to a baseline level of happiness regardless of positive or negative life events",
-    example:
-      "Lottery winners report similar happiness levels to before their win after just a few years.",
+    example: "Lottery winners report similar happiness levels to before their win after just a few years.",
   },
   {
     title: "The Peak-End Rule",
     url: "https://en.wikipedia.org/wiki/Peak%E2%80%93end_rule",
-    description:
-      "We judge experiences by their most intense moment and how they ended, not by total duration",
-    example:
-      "A painful medical procedure feels worse if pain spikes at the end, even if it was shorter overall.",
+    description: "We judge experiences by their most intense moment and how they ended, not by total duration",
+    example: "A painful medical procedure feels worse if pain spikes at the end, even if it was shorter overall.",
   },
   {
     title: "Goodhart's Law",
     url: "https://en.wikipedia.org/wiki/Goodhart%27s_law",
-    description:
-      "When a measure becomes a target, it ceases to be a good measure",
-    example:
-      'When schools are judged by test scores, teachers "teach to the test" rather than educate.',
+    description: "When a measure becomes a target, it ceases to be a good measure",
+    example: 'When schools are judged by test scores, teachers "teach to the test" rather than educate.',
   },
   {
     title: "The Dunning-Kruger Effect",
     url: "https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect",
-    description:
-      "A cognitive bias in which people with low ability at a task overestimate their ability",
-    example:
-      "Someone who took a few guitar lessons thinks they're ready to perform at a concert.",
+    description: "A cognitive bias in which people with low ability at a task overestimate their ability",
+    example: "Someone who took a few guitar lessons thinks they're ready to perform at a concert.",
   },
   {
     title: "The Sunk Cost Fallacy",
     url: "https://en.wikipedia.org/wiki/Sunk_cost#Fallacy_effect",
-    description:
-      "Continuing a course of action because of past investment rather than future value",
+    description: "Continuing a course of action because of past investment rather than future value",
     example: "Finishing a bad movie because you already paid for the ticket.",
   },
   {
     title: "Loss Aversion",
     url: "https://en.wikipedia.org/wiki/Loss_aversion",
-    description:
-      "Losses hurt roughly twice as much as equivalent gains feel good",
+    description: "Losses hurt roughly twice as much as equivalent gains feel good",
     example: "Losing $100 feels worse than finding $100 feels good.",
   },
   {
     title: "Parkinson's Law",
     url: "https://en.wikipedia.org/wiki/Parkinson%27s_law",
-    description:
-      "Work expands to fill the time available for its completion",
-    example:
-      "A report given a week deadline takes a week; the same report given two days takes two days.",
+    description: "Work expands to fill the time available for its completion",
+    example: "A report given a week deadline takes a week; the same report given two days takes two days.",
   },
   {
     title: "Confirmation Bias",
     url: "https://en.wikipedia.org/wiki/Confirmation_bias",
     description:
       "The tendency to favor information that confirms existing beliefs while ignoring contradictory evidence",
-    example:
-      "Only reading news sources that align with your political views.",
+    example: "Only reading news sources that align with your political views.",
   },
   {
     title: "The Fundamental Attribution Error",
     url: "https://en.wikipedia.org/wiki/Fundamental_attribution_error",
-    description:
-      "Attributing others' behavior to their character while attributing our own behavior to circumstances",
-    example:
-      '"He\'s late because he\'s irresponsible" vs. "I\'m late because traffic was bad."',
+    description: "Attributing others' behavior to their character while attributing our own behavior to circumstances",
+    example: '"He\'s late because he\'s irresponsible" vs. "I\'m late because traffic was bad."',
   },
   {
     title: "Imposter Syndrome",
     url: "https://en.wikipedia.org/wiki/Impostor_syndrome",
     description:
       'A psychological pattern in which one doubts one\'s accomplishments and has a persistent internalized fear of being exposed as a "fraud"',
-    example:
-      'A published author feels their book\'s success was a fluke and dreads being "found out."',
+    example: 'A published author feels their book\'s success was a fluke and dreads being "found out."',
   },
 ];

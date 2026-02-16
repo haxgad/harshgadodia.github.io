@@ -9,7 +9,7 @@ export const quotes: Quote[] = [
     author: "Lee Hsien Loong",
   },
   {
-    text: "And still, after all this time,\nThe sun never says to the earth,\n\"You owe Me.\"\nLook what happens with\nA love like that,\nIt lights the Whole Sky.",
+    text: 'And still, after all this time,\nThe sun never says to the earth,\n"You owe Me."\nLook what happens with\nA love like that,\nIt lights the Whole Sky.',
     author: "Hafiz",
   },
   {
