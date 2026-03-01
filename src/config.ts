@@ -4,7 +4,9 @@
 export const SITE_TITLE = "Harsh Gadodia";
 export const SITE_DESCRIPTION =
   "Personal website of Harsh Gadodia. Sharing thoughts on technology, management, and personal experiences.";
-export const TRANSITION_API = true;
+export const GITHUB_URL = "https://github.com/haxgad";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/harsh-gadodia";
+export const GA_MEASUREMENT_ID = "G-X7KZWL055S";
 
 // Navigation links used across the site
 export const NAV_LINKS = [

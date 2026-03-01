@@ -20,7 +20,6 @@
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.2",
     "daisyui": "^5.5.18",
-    "dayjs": "^1.11.19",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18"
   },

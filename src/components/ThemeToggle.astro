@@ -30,28 +30,35 @@
 </label>
 
 <script>
+  const THEME_LIGHT = 'light';
+  const THEME_DARK = 'dark';
+
+  let controller: AbortController | null = null;
+
   function initThemeToggle() {
+    // Abort previous listeners before re-initializing
+    if (controller) {
+      controller.abort();
+    }
+    controller = new AbortController();
+    const { signal } = controller;
+
     const toggles = document.querySelectorAll('.theme-toggle');
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || THEME_DARK;
 
     // Sync toggle state with current theme
     toggles.forEach(toggle => {
-      toggle.checked = currentTheme === 'light';
+      (toggle as HTMLInputElement).checked = currentTheme === THEME_LIGHT;
 
-      // Remove old listeners by cloning
-      const newToggle = toggle.cloneNode(true);
-      newToggle.checked = currentTheme === 'light';
-      toggle.parentNode?.replaceChild(newToggle, toggle);
-
-      newToggle.addEventListener('change', () => {
-        const theme = newToggle.checked ? 'light' : 'dark';
+      toggle.addEventListener('change', () => {
+        const theme = (toggle as HTMLInputElement).checked ? THEME_LIGHT : THEME_DARK;
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         // Sync other toggles
         document.querySelectorAll('.theme-toggle').forEach(t => {
-          t.checked = theme === 'light';
+          (t as HTMLInputElement).checked = theme === THEME_LIGHT;
         });
-      });
+      }, { signal });
     });
   }
 
