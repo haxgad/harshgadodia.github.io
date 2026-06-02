@@ -48,7 +48,8 @@ const jsonLd = `{
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<meta name="theme-color" content="#1d232a" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1d232a" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Apply theme immediately and persist across View Transitions -->
@@ -69,6 +70,7 @@ const jsonLd = `{
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
+<meta name="author" content="Harsh Gadodia" />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->

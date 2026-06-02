@@ -61,7 +61,7 @@ try {
       books.length > 0 ? (
         <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
           {books.map((book) => (
-            <ExternalLink href={book.link} class="block" title={book.title}>
+            <ExternalLink href={book.link} class="block">
               <img
                 src={book.image}
                 alt={book.title}

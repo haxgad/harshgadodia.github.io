@@ -7,7 +7,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: 'https://haxgad.com',
   prefetch: true,
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      changefreq: 'monthly',
+      priority: 0.7,
+      lastmod: new Date(),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()]
   }
