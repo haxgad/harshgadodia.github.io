@@ -1,5 +1,6 @@
 ---
 import Card from "../components/Card.astro";
+import ExternalLink from "../components/ExternalLink.astro";
 import { concepts } from "../data/concepts";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -12,14 +13,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         concepts.map((concept) => (
           <Card>
             <h2 class="card-title">
-              <a
-                href={concept.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="link link-primary"
-              >
-                {concept.title}
-              </a>
+              <ExternalLink href={concept.url}>{concept.title}</ExternalLink>
             </h2>
             <p>{concept.description}</p>
             <p class="text-sm italic opacity-70">{concept.example}</p>

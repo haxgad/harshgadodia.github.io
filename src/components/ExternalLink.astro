@@ -2,9 +2,10 @@
 interface Props {
   href: string;
   class?: string;
+  [key: string]: unknown;
 }
-const { href, class: className = "link link-primary" } = Astro.props;
+const { href, class: className = "link link-primary", ...rest } = Astro.props;
 ---
-<a href={href} target="_blank" rel="noopener noreferrer" class={className}>
+<a href={href} target="_blank" rel="noopener noreferrer" class={className} {...rest}>
   <slot />
 </a>

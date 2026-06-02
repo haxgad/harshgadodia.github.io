@@ -1,5 +1,52 @@
 ---
+import ExternalLink from "../components/ExternalLink.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const GOODREADS_USER_ID = "122474111";
+const GOODREADS_PROFILE = `https://www.goodreads.com/user/show/${GOODREADS_USER_ID}`;
+const FEED_URL = `https://www.goodreads.com/review/list_rss/${GOODREADS_USER_ID}?shelf=read&sort=date_added&order=d`;
+
+interface Book {
+  title: string;
+  link: string;
+  image: string;
+}
+
+// Pull a single tag's text content, handling both CDATA-wrapped and plain values.
+function extract(block: string, tag: string): string {
+  const match = block.match(new RegExp(`<${tag}>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?</${tag}>`));
+  return match ? match[1].trim() : "";
+}
+
+let books: Book[] = [];
+let feedFailed = false;
+
+try {
+  const res = await fetch(FEED_URL, {
+    headers: { "User-Agent": "Mozilla/5.0 (compatible; haxgad.com/build)" },
+  });
+  if (!res.ok) throw new Error(`Goodreads responded ${res.status}`);
+  const xml = await res.text();
+  books = xml
+    .split("<item>")
+    .slice(1)
+    .map((block) => ({
+      title: extract(block, "title"),
+      link: extract(block, "link"),
+      // Use the largest cover available and strip Goodreads' size suffix
+      // (e.g. `12345._SY75_.jpg`) so we get full-resolution artwork.
+      image: (extract(block, "book_large_image_url") || extract(block, "book_medium_image_url")).replace(
+        /\._[A-Z]+\d+_\./,
+        ".",
+      ),
+    }))
+    .filter((book) => book.image)
+    .slice(0, 50);
+  if (books.length === 0) feedFailed = true;
+} catch (error) {
+  console.error("Failed to fetch Goodreads bookshelf:", error);
+  feedFailed = true;
+}
 ---
 
 <BaseLayout>
@@ -7,96 +54,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <h1 class="text-2xl sm:text-3xl w-full font-bold mb-4">Bookshelf</h1>
 
     <p class="mb-6">
-      <a
-        href="https://www.goodreads.com/user/show/122474111"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="link link-primary"
-      >
-        Connect with me on Goodreads
-      </a>
+      <ExternalLink href={GOODREADS_PROFILE}>Connect with me on Goodreads</ExternalLink>
     </p>
 
-    <!-- Loading skeleton -->
-    <div id="bookshelf-skeleton" class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3 transition-opacity duration-500">
-      {Array.from({ length: 16 }).map(() => (
-        <div class="animate-pulse">
-          <div class="bg-base-300 rounded-lg aspect-[2/3]"></div>
+    {
+      books.length > 0 ? (
+        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
+          {books.map((book) => (
+            <ExternalLink href={book.link} class="block" title={book.title}>
+              <img
+                src={book.image}
+                alt={book.title}
+                loading="lazy"
+                decoding="async"
+                width="98"
+                height="147"
+                class="rounded-lg w-full h-auto aspect-[2/3] object-cover transition-transform duration-200 hover:scale-105"
+              />
+            </ExternalLink>
+          ))}
         </div>
-      ))}
-    </div>
-
-    <div id="gr_grid_widget_1715093350"></div>
-
-    <script is:inline>
-      (function() {
-        const GOODREADS_USER_ID = '122474111';
-        const GOODREADS_WIDGET_ID = '1715093350';
-
-        // Add dns-prefetch for Goodreads
-        var dnsPrefetch = document.createElement('link');
-        dnsPrefetch.rel = 'dns-prefetch';
-        dnsPrefetch.href = 'https://www.goodreads.com';
-        document.head.appendChild(dnsPrefetch);
-
-        const skeleton = document.getElementById('bookshelf-skeleton');
-        const widget = document.getElementById(`gr_grid_widget_${GOODREADS_WIDGET_ID}`);
-        var loaded = false;
-
-        function loadWidget() {
-          if (loaded) return;
-          loaded = true;
-          var s = document.createElement('script');
-          s.src = `https://www.goodreads.com/review/grid_widget/${GOODREADS_USER_ID}?cover_size=medium&hide_link=true&hide_title=true&num_books=50&order=d&shelf=read&sort=date_added&widget_id=${GOODREADS_WIDGET_ID}`;
-          document.body.appendChild(s);
-
-          const observer = new MutationObserver((mutations, obs) => {
-            if (widget && widget.children.length > 0) {
-              widget.style.display = 'grid';
-              skeleton.style.opacity = '0';
-              setTimeout(function() { skeleton.style.display = 'none'; }, 500);
-              obs.disconnect();
-            }
-          });
-          observer.observe(widget, { childList: true, subtree: true });
-
-          // Fallback: if MutationObserver never fires after 10 seconds, show error
-          setTimeout(function() {
-            if (skeleton.style.display !== 'none') {
-              skeleton.innerHTML = '<p class="text-base-content/60">Unable to load bookshelf. <a href="https://www.goodreads.com/user/show/122474111" class="link link-primary" target="_blank" rel="noopener noreferrer">View on Goodreads</a></p>';
-              skeleton.style.display = 'block';
-              skeleton.style.opacity = '1';
-            }
-          }, 10000);
-        }
-
-        var observer = new IntersectionObserver(function(entries) {
-          if (entries[0].isIntersecting) {
-            loadWidget();
-            observer.disconnect();
-          }
-        }, { rootMargin: '200px' });
-
-        observer.observe(widget);
-      })();
-    </script>
-
+      ) : (
+        <p class="text-base-content/60">
+          {feedFailed ? "Unable to load the bookshelf right now. " : "Nothing here yet. "}
+          <ExternalLink href={GOODREADS_PROFILE}>View on Goodreads</ExternalLink>
+        </p>
+      )
+    }
   </div>
 </BaseLayout>
-
-<style is:global>
-  .gr_grid_book_container {
-    padding: 10px;
-    display: inline-block;
-  }
-  .gr_grid_book_container img {
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-  }
-  .gr_grid_book_container img:hover {
-    transform: scale(1.05);
-  }
-  .gr_grid_book_container noscript {
-    display: none;
-  }
-</style>

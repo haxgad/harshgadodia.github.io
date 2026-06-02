@@ -1,0 +1,40 @@
+name: Lighthouse CI
+
+on:
+  pull_request:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm run build
+      - name: Serve site
+        run: pnpm run preview --host 127.0.0.1 --port 4321 &
+      - name: Wait for server
+        run: npx --yes wait-on http://127.0.0.1:4321 --timeout 60000
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://127.0.0.1:4321/
+            http://127.0.0.1:4321/bookshelf
+            http://127.0.0.1:4321/concepts
+            http://127.0.0.1:4321/links
+            http://127.0.0.1:4321/quotes
+          uploadArtifacts: true
+          temporaryPublicStorage: true
